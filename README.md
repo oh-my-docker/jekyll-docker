@@ -25,3 +25,10 @@ docker run -it --rm -p 4000:4000 -v /Users/penxiao/tmp:/omd quay.io/oh-my-docker
 open the browser and go to [http://127.0.0.1:4000/](http://127.0.0.1:4000/) and we will see:
 
 ![image](demo.png)
+
+
+## Welcome to subcribe MY WeChat official account
+
+欢迎大家订阅我的公众号，会不定期分享一些容器，网络，和编程相关技术文章。
+
+![QR](https://github.com/xiaopeng163/statistic/blob/master/QR/MY_WeChat_official_account.jpg)
