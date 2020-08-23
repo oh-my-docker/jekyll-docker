@@ -11,16 +11,27 @@ docker pull quay.io/omd/jekyll
 
 ## Create a new site
 
-Create a new site called `my-awesome-site` under local folder `/Users/penxiao/tmp`
+Create a new site called `my-awesome-site` then go to this folder and run:
 
 ```bash
-docker run -it --rm -v /Users/penxiao/tmp:/omd quay.io/omd/jekyll jekyll new my-awesome-site
+$ cd my-awesome-site
+$ docker run -it --rm -v $(pwd):/omd quay.io/omd/jekyll jekyll new .
+```
+
+The site was created.
+
+```
+$ my-awesome-site ls
+404.html       Gemfile        Gemfile.lock   _config.yml    _posts         about.markdown index.markdown
+$ my-awesome-site
 ```
 
 ## Build and serve the site
 
 ```bash
-docker run -it --rm -p 4000:4000 -v /Users/penxiao/tmp:/omd quay.io/omd/jekyll sh -c "cd my-awesome-site;bundle install;jekyll serve --host=0.0.0.0"
+$ pwd
+/home/xxxxx/my-awesome-site
+$ docker run -it --rm -p 4000:4000 -v $(pwd):/omd quay.io/omd/jekyll sh -c "bundle install;jekyll serve --host=0.0.0.0"
 ```
 
 open the browser and go to [http://127.0.0.1:4000/](http://127.0.0.1:4000/) and we will see:
