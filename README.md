@@ -31,7 +31,7 @@ $ my-awesome-site
 ```bash
 $ pwd
 /home/xxxxx/my-awesome-site
-$ docker run -it --rm -p 4000:4000 -v $(pwd):/omd quay.io/omd/jekyll sh -c "bundle install;jekyll serve --host=0.0.0.0"
+$ docker run -it --rm -p 4000:4000  -v $(pwd):/omd quay.io/omd/jekyll sh -c "bundle install; jekyll serve --host=0.0.0.0 --livereload"
 ```
 
 open the browser and go to [http://127.0.0.1:4000/](http://127.0.0.1:4000/) and we will see:
